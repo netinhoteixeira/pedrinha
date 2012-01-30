@@ -1,0 +1,25 @@
+-- Describe MINERAL
+CREATE TABLE mineral (
+    "idmineral" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "nome" TEXT NOT NULL,
+    "classe1" TEXT,
+    "classe2" TEXT,
+    "classe3" TEXT,
+    "cor" TEXT,
+    "risco" TEXT,
+    "dureza_min" REAL,
+    "dureza_max" REAL,
+    "clivagem" TEXT,
+    "densidade_min" REAL,
+    "densidade_max" REAL,
+    "transparencia" TEXT,
+    "brilho" TEXT,
+    "formula" TEXT,
+    "fratura" TEXT,
+    "outras" TEXT,
+    "tags" TEXT,
+    "otica" TEXT,
+    "ocorrencia" TEXT,
+    "associacao" TEXT,
+    "imagem" BLOB
+);

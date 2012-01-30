@@ -1,0 +1,301 @@
+object Dados: TDados
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 144
+  HorizontalOffset = 271
+  VerticalOffset = 150
+  Width = 260
+  object DatasetMineral: TSqlite3Dataset
+    AutoIncrementKey = True
+    FileName = 'C:\Clientes\com.google.code\pedrinha\bin\pedrinha.sqlite'
+    PrimaryKey = 'idmineral'
+    SaveOnClose = True
+    SQL = 'SELECT * FROM mineral'
+    TableName = 'mineral'
+    left = 16
+    top = 16
+    object DatasetMineralidmineral: TAutoIncField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'idmineral'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object DatasetMineralnome: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = DatasetMineralnomeGetText
+      BlobType = ftWideMemo
+      Transliterate = False
+    end
+    object DatasetMineralclasse1: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'classe1'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralclasse2: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'classe2'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralclasse3: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'classe3'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralcor: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'cor'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralrisco: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'risco'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineraldureza_min: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'dureza_min'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object DatasetMineraldureza_max: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'dureza_max'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object DatasetMineralclivagem: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'clivagem'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineraldensidade_min: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'densidade_min'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object DatasetMineraldensidade_max: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'densidade_max'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object DatasetMineraltransparencia: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'transparencia'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralbrilho: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'brilho'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralformula: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'formula'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = DatasetMineralnomeGetText
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralfratura: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'fratura'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineraloutras: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'outras'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineraltags: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'tags'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralotica: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'otica'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralocorrencia: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ocorrencia'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralassociacao: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'associacao'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object DatasetMineralimagem: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'imagem'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+  end
+  object DatasourceMineral: TDatasource
+    DataSet = DatasetMineral
+    left = 56
+    top = 16
+  end
+  object DatasetMineralClasseComboBox: TSqlite3Dataset
+    FileName = 'C:\Clientes\com.google.code\pedrinha\bin\pedrinha.sqlite'
+    left = 16
+    top = 56
+    object DatasetMineralclasse4: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'classe1'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = DatasetMineralnomeGetText
+      BlobType = ftBlob
+      Transliterate = False
+    end
+  end
+end
