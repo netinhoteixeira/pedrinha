@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, sqlite3laz, imagesforlazarus, udados, umineral_lista, umineral_item
+  Forms, sqlite3laz, udados, umineral_lista, umineral_item
   { you can add units after this };
 
 {$R *.res}

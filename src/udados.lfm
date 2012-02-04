@@ -17,7 +17,6 @@ object Dados: TDados
     AfterEdit = DatasetMineralAfterPost
     AfterPost = DatasetMineralAfterPost
     AfterDelete = DatasetMineralAfterPost
-    AfterScroll = DatasetMineralAfterScroll
     left = 16
     top = 16
     object DatasetMineralidmineral: TAutoIncField
@@ -376,4 +375,4 @@ object Dados: TDados
     left = 56
     top = 176
   end
-end
+end
