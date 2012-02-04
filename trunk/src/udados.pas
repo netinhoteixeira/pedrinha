@@ -5,7 +5,7 @@ unit udados;
 interface
 
 uses
-  Forms, Classes, SysUtils, FileUtil, Sqlite3DS, db, Dialogs, LazJPG;
+  Forms, Classes, SysUtils, FileUtil, Sqlite3DS, db, Dialogs;
 
 type
 
@@ -49,7 +49,6 @@ type
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
     procedure DatasetMineralAfterPost(DataSet: TDataSet);
-    procedure DatasetMineralAfterScroll(DataSet: TDataSet);
     procedure DatasetMineralnomeGetText(Sender: TField; var aText: string;
       DisplayText: Boolean);
   private
@@ -62,8 +61,6 @@ var
   Dados: TDados;
 
 implementation
-
-uses umineral_item;
 
 {$R *.lfm}
 
@@ -128,37 +125,6 @@ begin
   DatasetMineralClasse3ComboBox.Refresh();
 end;
 
-procedure TDados.DatasetMineralAfterScroll(DataSet: TDataSet);
-var
-  JPGImage: TJPGImage;
-  MemoryStream: TMemoryStream;
-begin
-  if (Assigned(FormMineralItem)) then
-  begin
-    //if (FormMineralItem.Showing) then
-    //begin
-      FormMineralItem.Imagem.Picture.Clear();
-      //if (not DatasetMineralimagem.IsNull) then
-      //begin
-        JPGImage := TJPGImage.Create();
-        MemoryStream := TMemoryStream.Create();
-        try
-          DatasetMineralimagem.SaveToStream(MemoryStream);
-          if (MemoryStream.Size > 0) then
-          begin
-            MemoryStream.Seek(0, soFromBeginning);
-            JPGImage.LoadFromStream(MemoryStream);
-            FormMineralItem.Imagem.Assign(JPGImage);
-          end;
-        finally
-          JPGImage.Destroy();
-          MemoryStream.Destroy();
-        end;
-      //end;
-    //end;
-  end;
-end;
-
 procedure TDados.DatasetMineralnomeGetText(Sender: TField; var aText: string;
   DisplayText: Boolean);
 begin
@@ -166,4 +132,4 @@ begin
 end;
 
 end.
-
+
