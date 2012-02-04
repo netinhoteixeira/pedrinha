@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, DbCtrls,
-  StdCtrls, ComCtrls, ExtCtrls, Buttons, ActnList, ExtDlgs;
+  StdCtrls, ComCtrls, ExtCtrls;
 
 type
 
@@ -63,4 +63,4 @@ implementation
 {$R *.lfm}
 
 end.
-
+
