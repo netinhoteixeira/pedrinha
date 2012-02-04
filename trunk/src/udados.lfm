@@ -2,7 +2,7 @@ object Dados: TDados
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   OldCreateOrder = False
-  Height = 144
+  Height = 224
   HorizontalOffset = 271
   VerticalOffset = 150
   Width = 260
@@ -13,6 +13,11 @@ object Dados: TDados
     SaveOnClose = True
     SQL = 'SELECT * FROM mineral'
     TableName = 'mineral'
+    AfterInsert = DatasetMineralAfterPost
+    AfterEdit = DatasetMineralAfterPost
+    AfterPost = DatasetMineralAfterPost
+    AfterDelete = DatasetMineralAfterPost
+    AfterScroll = DatasetMineralAfterScroll
     left = 16
     top = 16
     object DatasetMineralidmineral: TAutoIncField
@@ -26,7 +31,7 @@ object Dados: TDados
       Required = False
     end
     object DatasetMineralnome: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'nome'
       Index = 1
@@ -39,7 +44,7 @@ object Dados: TDados
       Transliterate = False
     end
     object DatasetMineralclasse1: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'classe1'
       Index = 2
@@ -47,11 +52,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralclasse2: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'classe2'
       Index = 3
@@ -59,11 +65,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralclasse3: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'classe3'
       Index = 4
@@ -71,11 +78,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralcor: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'cor'
       Index = 5
@@ -83,11 +91,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralrisco: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'risco'
       Index = 6
@@ -95,6 +104,7 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
@@ -121,7 +131,7 @@ object Dados: TDados
       Size = 255
     end
     object DatasetMineralclivagem: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'clivagem'
       Index = 9
@@ -129,6 +139,7 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
@@ -155,7 +166,7 @@ object Dados: TDados
       Size = 255
     end
     object DatasetMineraltransparencia: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'transparencia'
       Index = 12
@@ -163,11 +174,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralbrilho: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'brilho'
       Index = 13
@@ -175,11 +187,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralformula: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'formula'
       Index = 14
@@ -192,7 +205,7 @@ object Dados: TDados
       Transliterate = False
     end
     object DatasetMineralfratura: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'fratura'
       Index = 15
@@ -200,11 +213,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineraloutras: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'outras'
       Index = 16
@@ -212,11 +226,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineraltags: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'tags'
       Index = 17
@@ -224,11 +239,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralotica: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'otica'
       Index = 18
@@ -236,11 +252,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralocorrencia: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'ocorrencia'
       Index = 19
@@ -248,11 +265,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
     object DatasetMineralassociacao: TMemoField
-      DisplayWidth = 10
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'associacao'
       Index = 20
@@ -260,11 +278,12 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      OnGetText = DatasetMineralnomeGetText
       BlobType = ftBlob
       Transliterate = False
     end
-    object DatasetMineralimagem: TStringField
-      DisplayWidth = 255
+    object DatasetMineralimagem: TBlobField
+      DisplayWidth = 10
       FieldKind = fkData
       FieldName = 'imagem'
       Index = 21
@@ -272,7 +291,7 @@ object Dados: TDados
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 255
+      BlobType = ftBlob
     end
   end
   object DatasourceMineral: TDatasource
@@ -284,8 +303,14 @@ object Dados: TDados
     FileName = 'C:\Clientes\com.google.code\pedrinha\bin\pedrinha.sqlite'
     left = 16
     top = 56
-    object DatasetMineralclasse4: TMemoField
-      DisplayWidth = 10
+  end
+  object DatasetMineralClasse1ComboBox: TSqlite3Dataset
+    FileName = 'C:\Clientes\com.google.code\pedrinha\bin\pedrinha.sqlite'
+    SQL = 'SELECT DISTINCT classe1 FROM mineral ORDER BY classe1 ASC'
+    left = 16
+    top = 96
+    object DatasetMineralclasse5: TMemoField
+      DisplayWidth = 255
       FieldKind = fkData
       FieldName = 'classe1'
       Index = 0
@@ -297,5 +322,58 @@ object Dados: TDados
       BlobType = ftBlob
       Transliterate = False
     end
+  end
+  object DatasourceMineralClasse1ComboBox: TDatasource
+    DataSet = DatasetMineralClasse1ComboBox
+    left = 56
+    top = 96
+  end
+  object DatasetMineralClasse2ComboBox: TSqlite3Dataset
+    FileName = 'C:\Clientes\com.google.code\pedrinha\bin\pedrinha.sqlite'
+    SQL = 'SELECT DISTINCT classe2 FROM mineral ORDER BY classe2 ASC'
+    left = 16
+    top = 136
+    object DatasetMineralclasse6: TMemoField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'classe2'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = DatasetMineralnomeGetText
+      BlobType = ftBlob
+      Transliterate = False
+    end
+  end
+  object DatasourceMineralClasse2ComboBox: TDatasource
+    DataSet = DatasetMineralClasse2ComboBox
+    left = 56
+    top = 136
+  end
+  object DatasetMineralClasse3ComboBox: TSqlite3Dataset
+    FileName = 'C:\Clientes\com.google.code\pedrinha\bin\pedrinha.sqlite'
+    SQL = 'SELECT DISTINCT classe3 FROM mineral ORDER BY classe3 ASC'
+    left = 16
+    top = 176
+    object DatasetMineralclasse7: TMemoField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'classe3'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = DatasetMineralnomeGetText
+      BlobType = ftBlob
+      Transliterate = False
+    end
+  end
+  object DatasourceMineralClasse3ComboBox: TDatasource
+    DataSet = DatasetMineralClasse3ComboBox
+    left = 56
+    top = 176
   end
 end
