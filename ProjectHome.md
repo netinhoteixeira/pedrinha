@@ -1,0 +1,1 @@
+Guia de minerais para auxílio pessoal e elaborado usando o Lazarus com base em SQLite.
